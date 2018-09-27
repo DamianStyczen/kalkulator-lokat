@@ -17,12 +17,12 @@ function getRevenue(yearlyValue, percent, years, capitalizationPeriodInMonths){
     }
     return revenue.toFixed(2);
 }
-
+// Unit tests
 console.assert(getRevenue(1000, 5, 1, 12) == 1040.50, "Test 1 failed. " + getRevenue(1000, 5, 1, 12));
-
 console.assert(getRevenue(1000, 5, 2, 12) == 2123.14, "Test 2 failed. " + getRevenue(1000, 5, 2, 12));
-
 console.assert(getRevenue(1000, 5, 1, 6) == 1040.91, "Test 3 failed. " + getRevenue(1000, 5, 1, 6));
+//
+
 
 const value = document.getElementById("money");
 const percent = document.getElementById("percent");
@@ -33,8 +33,8 @@ const button = document.getElementById("submitButton");
 
 const result = document.getElementById("result");
 
-button.addEventListener("click", (event)=>{
+button.addEventListener("click", ()=>{
     console.log(value.value, percent.value, years.value, capitalization.value);
-
-    result.innerText = getRevenue(Number(value.value), Number(percent.value), Number(years.value), Number(capitalization.value));
+    let revenue = getRevenue(Number(value.value), Number(percent.value), Number(years.value), Number(capitalization.value))
+    result.innerText = `Wynik: ${revenue} zł`;
 })

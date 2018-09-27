@@ -4,19 +4,28 @@
     box-sizing: content-box;
 }
 body{
-    background: #EFEDEA;
-    color: #434C3A;
+    background: #000;
+    color: #000;
+}
+@media (max-width: 480px){
+    .main-width{
+        width: 100%;
+    }
+}
+@media (min-width: 481px){
+    .main-width{
+        width: 480px;
+    }
 }
 .main-width{
-    width: 480px;
-    height: 640px;
-    background: #E1DBC1;
+    height: 560px;
+    background: whitesmoke;
     border-radius: 30px;
     margin: 0 auto;
     margin-top: 30px;
 }
 h1{
-    color: #E59D92;
+    color: navy;
     margin: 40px;
     padding-top: 40px;
     text-align: center;
@@ -28,7 +37,8 @@ label{
 
 }
 input{
-    background: #8A9869;
+    background: #000;
+    color: white;
     border: none;
     font-size: 20px;
     border-radius: 10px;
@@ -37,8 +47,8 @@ input{
     text-align: center;
     margin: 5px;
 }
-input:hover, input:focus{
-    background: #E59D92;
+input:focus{
+    background: navy;
     outline: none;
 }
 input::-webkit-inner-spin-button{
@@ -48,11 +58,19 @@ label span{
     position: absolute;
     margin-top: 15px;
     margin-left: 5px;
+    color: navy;
+    font-weight: 550;
 }
 #submitButton{
     width: 125px;
-    background: #E59D92;
+    background: navy;
+    color: white;
 }
 #result{
-    margin: 20px;
+    margin: 30px;
+    background: navy;
+    color: #fff;
+    border-radius: 20px;
+    line-height:40px;
+
 }
